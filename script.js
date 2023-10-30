@@ -40,8 +40,11 @@ function starFire(){
 
 function renderAttack(){
     // go to div tags and search for "ap-text"
-    document.querySelector("div.ap-text").textContent = attackPoints;
-    document.querySelector("div.hp-text").textContent = fungusHP;
+    document.querySelector("div.ap-text").textContent = `${attackPoints} AP`;
+    document.querySelector("div.hp-text").textContent = `${fungusHP} HP`;
+    if( attackPoints <= 0 ){
+        document.querySelector('div.walk').className = 'freaky-fungus jump';
+    }
 }
 
 function onReady() {
