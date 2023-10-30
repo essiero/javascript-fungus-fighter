@@ -12,6 +12,7 @@ function makeZero(){
     }
     console.log('Attack Points: ', attackPoints);
     console.log("Hit Points: ", fungusHP);
+    renderAttack();
 }
 
 function arcaneScepter(){
@@ -35,6 +36,12 @@ function starFire(){
     attackPoints -= 33;
     fungusHP -= 25;
     makeZero();
+}
+
+function renderAttack(){
+    // go to div tags and search for "ap-text"
+    document.querySelector("div.ap-text").textContent = attackPoints;
+    document.querySelector("div.hp-text").textContent = fungusHP;
 }
 
 function onReady() {
