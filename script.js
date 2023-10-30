@@ -44,6 +44,12 @@ function renderAttack(){
     document.querySelector("div.hp-text").textContent = `${fungusHP} HP`;
     if( attackPoints <= 0 ){
         document.querySelector('div.walk').className = 'freaky-fungus jump';
+        // stack overflow disabling multiple buttons with the same class attribute but different ids 
+        document.querySelectorAll('.attack-btn').forEach(button => button.disabled = true);
+    }
+    if (fungusHP <= 0 ){
+        document.querySelector('div.walk').className = 'freaky-fungus dead';
+
     }
 }
 
