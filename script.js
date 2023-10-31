@@ -42,6 +42,8 @@ function renderAttack(){
     // go to div tags and search for "ap-text"
     document.querySelector("div.ap-text").textContent = `${attackPoints} AP`;
     document.querySelector("div.hp-text").textContent = `${fungusHP} HP`;
+    document.getElementById('ap-meter').value = `${attackPoints}`;
+    document.getElementById('hp-meter').value = `${fungusHP}`;
     if( attackPoints <= 0 ){
         document.querySelector('div.walk').className = 'freaky-fungus jump';
         // stack overflow disabling multiple buttons with the same class attribute but different ids 
