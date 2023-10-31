@@ -55,6 +55,14 @@ function renderAttack(){
     }
 }
 
+function regenerateHP(){
+    if (fungusHP < 50 && fungusHP > 0){
+        fungusHP += 1;
+    }
+}
+
+setInterval(regenerateHP, 1000);
+
 function onReady() {
     console.log("Ready to go!")
     
